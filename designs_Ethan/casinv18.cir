@@ -1,0 +1,19 @@
+Cascaded inverters
+.lib '/class/ece482/models18' MOS
+
+.param wn1 = 360n
+.param wn2 = 1.08u
+.param lmin = 180n
+
+.param Idrain = 600n
+.param Isource = Idrain
+
+mn1 VSS IN OUT VSS nmos l=lmin w=wn1 AD=Idrain*wn1 AS=Isource*wn1 PD=2*Idrain+wn1 PS=2*Isource+wn1
+mp1 VDD IN OUT VDD pmos l=lmin w=2*wn1 AD=Idrain*2*wn1 AS=Isource*2*wn1 PD=2*Idrain+2*wn1 PS=2*Isource+2*wn1
+
+mn2 VSS OUT Z VSS nmos l=lmin w=wn2 AD=Idrain*wn2 AS=Isource*wn2 PD=2*Idrain+wn2 PS=2*Isource+wn2
+mp2 VDD OUT Z VDD pmos l=lmin w=2*wn2 AD=Idrain*2*wn2 AS=Isource*2*wn2 PD=2*Idrain+2*wn2 PS=2*Isource+2*wn2
+
+vVDD VDD 0 1.8
+vVSS VSS 0 0
+vIN IN 0 pulse(0 1.8 20ps 20ps 20ps 2ns 4ns)
