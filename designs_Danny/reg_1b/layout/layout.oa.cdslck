@@ -1,0 +1,16 @@
+#
+# Edit Lock-Stake file. CAUTION: Please do not change.
+#
+# Information about current Edit Lock Owner.
+#
+LockStakeVersion               1.1
+LoginName                      djf6
+HostName                       fastx3-19.ews.illinois.edu
+ProcessIdentifier              67758
+ProcessCreationTime_UTC        1732631227
+ProcessCreationTime_Readable   Tue Nov 26 08:27:07 2024 CST
+AppIdentifier                  OA File System Design Manager
+OSType                         unix
+ReasonForPlacingEditLock       OpenAccess edit lock
+FilePathUsedToEditLock         /home/djf6/ece482.work/gpdk045/final_project_local/reg_1b/layout/layout.oa.cdslck
+TimeEditLocked                 Tue Nov 26 08:28:50 2024 CST
