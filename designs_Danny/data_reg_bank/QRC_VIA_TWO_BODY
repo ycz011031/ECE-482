@@ -1,0 +1,10 @@
+8 9
+np_rpoly_conn np_rmetal1_conn np_rmetal2_conn np_rmetal3_conn np_rmetal4_conn np_rmetal5_conn np_rmetal6_conn np_rmetal7_conn np_rmetal8_conn
+rVia1,X 2 3
+rVia2,X 3 4
+rVia3,X 4 5
+rVia4,X 5 6
+rVia5,X 6 7
+rVia6,X 7 8
+rVia7,X 8 9
+rcont_poly,X 1 2

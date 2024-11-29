@@ -1,0 +1,34 @@
+FOX nwell_conn
+metal9_conn metal9_conn
+metal10_conn metal10_conn
+metal11_conn metal11_conn
+Oxide np_rpdiff_conn p_rpdiff_conn np_rndiff_conn p_rndiff_conn
+cont_pdiff cont_pdiff_metal1_conn_pdiff_conn
+cont_ndiff cont_ndiff_metal1_conn_ndiff_conn
+metal8_conn np_rmetal8_conn p_rmetal8_conn
+metal7_conn np_rmetal7_conn p_rmetal7_conn
+metal6_conn np_rmetal6_conn p_rmetal6_conn
+metal5_conn np_rmetal5_conn p_rmetal5_conn
+metal4_conn np_rmetal4_conn p_rmetal4_conn
+metal3_conn np_rmetal3_conn p_rmetal3_conn
+metal2_conn np_rmetal2_conn p_rmetal2_conn
+metal1_conn np_rmetal1_conn p_rmetal1_conn
+poly_conn np_rpoly_conn p_rpoly_conn
+ndiff_conn np_rndiff_conn p_rndiff_conn
+pdiff_conn np_rpdiff_conn p_rpdiff_conn
+nwell_conn nwell_conn
+Via7 np_rVia7 p_rVia7
+Via6 np_rVia6 p_rVia6
+Via5 np_rVia5 p_rVia5
+Via4 np_rVia4 p_rVia4
+Via3 np_rVia3 p_rVia3
+Via2 np_rVia2 p_rVia2
+Via1 np_rVia1 p_rVia1
+cont_poly np_rcont_poly p_rcont_poly
+ptap_pdiff_conn_ovia ptap_pdiff_conn_ovia
+ptap np_rptap p_rptap
+pwell_ptap_ovia pwell_ptap_ovia
+pwell np_rpwell p_rpwell
+ntap_ndiff_conn_ovia ntap_ndiff_conn_ovia
+ntap np_rntap p_rntap
+nwell_conn_ntap_ovia nwell_conn_ntap_ovia
