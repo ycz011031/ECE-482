@@ -1,4 +1,4 @@
-# 47
+# 54
 scc=avP930_0_1_scc scb=avP930_0_1_scb sca=avP930_0_1_sca sb=1.4e-07 sa=1.4e-07
 scc=avP930_0_2_scc scb=avP930_0_2_scb sca=avP930_0_2_sca sb=1.4e-07 sa=1.4e-07
 scc=avP930_0_3_scc scb=avP930_0_3_scb sca=avP930_0_3_sca sb=3.45e-07 sa=1.4e-07
@@ -33,16 +33,23 @@ scc=9.64553e-24 scb=4.27268e-12 sca=0.264419 sb=1.4e-07 sa=1.4e-07
 scc=9.64553e-24 scb=4.27274e-12 sca=0.277951 sb=1.4e-07 sa=1.4e-07
 scc=1.76204e-23 scb=6.50513e-12 sca=0.304133 sb=3.45e-07 sa=1.4e-07
 scc=1.76209e-23 scb=6.53953e-12 sca=0.315513 sb=1.4e-07 sa=3.45e-07
+scc=avP930_0_1_scc scb=avP930_0_1_scb sca=avP930_0_1_sca sb=9.6e-07 sa=3.45e-07
+scc=avP930_0_2_scc scb=avP930_0_2_scb sca=avP930_0_2_sca sb=7.55e-07 sa=5.5e-07
+scc=avP930_0_3_scc scb=avP930_0_3_scb sca=avP930_0_3_sca sb=5.5e-07 sa=7.55e-07
+scc=avP930_0_4_scc scb=avP930_0_4_scb sca=avP930_0_4_sca sb=3.45e-07 sa=9.6e-07
+scc=avP930_0_5_scc scb=avP930_0_5_scb sca=avP930_0_5_sca sb=1.4e-07 sa=1.165e-06
+scc=avP930_0_6_scc scb=avP930_0_6_scb sca=avP930_0_6_sca sb=1.165e-06 sa=1.4e-07
+scc=avP600_0_1_scc scb=avP600_0_1_scb sca=avP600_0_1_sca sb=9.6e-07 sa=3.45e-07
+scc=avP600_0_2_scc scb=avP600_0_2_scb sca=avP600_0_2_sca sb=7.55e-07 sa=5.5e-07
+scc=avP600_0_3_scc scb=avP600_0_3_scb sca=avP600_0_3_sca sb=5.5e-07 sa=7.55e-07
+scc=avP600_0_4_scc scb=avP600_0_4_scb sca=avP600_0_4_sca sb=3.45e-07 sa=9.6e-07
+scc=avP600_0_5_scc scb=avP600_0_5_scb sca=avP600_0_5_sca sb=1.4e-07 sa=1.165e-06
+scc=avP600_0_6_scc scb=avP600_0_6_scb sca=avP600_0_6_sca sb=1.165e-06 sa=1.4e-07
 scc=0.00187781 scb=0.0261429 sca=22.378 sb=1.4e-07 sa=1.4e-07
 scc=0.00190111 scb=0.0273602 sca=22.3266 sb=1.4e-07 sa=1.4e-07
 scc=0.00178852 scb=0.0208638 sca=16.6672 sb=1.4e-07 sa=1.4e-07
 scc=6.29388e-05 scb=0.00451408 sca=4.74732 sb=1.4e-07 sa=1.4e-07
 scc=6.29388e-05 scb=0.00451408 sca=4.7559 sb=1.4e-07 sa=1.4e-07
-scc=0.00413873 scb=0.0245402 sca=30.19 sb=1.4e-07 sa=1.4e-07
-scc=1.43636e-23 scb=7.83665e-12 sca=0.344716 sb=1.4e-07 sa=1.4e-07
-scc=4.28471e-20 scb=3.15884e-10 sca=0.411662 sb=1.4e-07 sa=1.4e-07
-scc=6.29388e-05 scb=0.0045141 sca=5.01357 sb=1.4e-07 sa=1.4e-07
-scc=3.7247e-16 scb=2.57354e-08 sca=0.517399 sb=1.4e-07 sa=1.4e-07
-scc=0.000792389 scb=0.0192447 sca=15.6965 sb=1.4e-07 sa=1.4e-07
-scc=0.00072945 scb=0.0147306 sca=11.2003 sb=1.4e-07 sa=1.4e-07
+scc=6.29388e-05 scb=0.00451408 sca=4.90025 sb=1.4e-07 sa=1.4e-07
+scc=6.29388e-05 scb=0.00451413 sca=5.04454 sb=1.4e-07 sa=1.4e-07
 $This is end of the device boxl file$
