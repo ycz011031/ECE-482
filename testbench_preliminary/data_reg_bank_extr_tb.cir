@@ -1,0 +1,78 @@
+project testbench
+.lib '/class/ece482/gpdk045_mos' TT
+
+$The following parameter can be modified.
+.param TCK = 0.4167n
+
+$The following parameters cannot be modified.
+.param trf_ck = 5p
+.param trf_ip_reset = 50p
+.param CK_pw = 0.5*TCK
+.param reset_delay = 0
+.param reset_delay2 = 25*TCK
+.param reset_pw = 0.9n
+.param reset_pw2 = 3n
+.param sim_end = 50*TCK
+.param input_delay = 0.5n
+.param input_pw = 4*TCK
+
+.include data_reg_bank_extr_module.cir
+
+xtop clk_out reset x0 x1 x2 x3 y0 y1 y2 y3 x_out_0 x_out_1 x_out_2 x_out_3 x_out_b_0 x_out_b_1 x_out_b_2 x_out_b_3 y_out_0 y_out_1 y_out_2 y_out_3 y_out_b_0 y_out_b_1 y_out_b_2 y_out_b_3 clk_div4_out clk_div4_out_b vdd vss data_reg_bank
+
+$Clock Buffer - You will clk_out as your clock signal
+mnm1 clk_out net10 vss vss g45n1svt L=45e-9 W=960e-9 AD=134.4e-15 AS=134.4e-15 PD=2.2e-6 PS=2.2e-6 NRD=145.833e-3 NRS=145.833e-3 M=1
+mnm0 net10 CK vss vss g45n1svt L=45e-9 W=240e-9 AD=33.6e-15 AS=33.6e-15 PD=760e-9 PS=760e-9 NRD=583.333e-3 NRS=583.333e-3 M=1
+mpm1 clk_out net10 vdd vdd g45p1svt L=45e-9 W=1.92e-6 AD=268.8e-15 AS=268.8e-15 PD=4.12e-6 PS=4.12e-6 NRD=72.9167e-3 NRS=72.9167e-3 M=1
+mpm0 net10 CK vdd vdd g45p1svt L=45e-9 W=480e-9 AD=67.2e-15 AS=67.2e-15 PD=1.24e-6 PS=1.24e-6 NRD=291.667e-3 NRS=291.667e-3 M=1
+
+vX3 x3 0 PWL(0 0 'input_delay+0*trf_ip_reset+0*input_pw' 0 'input_delay+1*trf_ip_reset+0*input_pw' 1.1 'input_delay+1*trf_ip_reset+1*input_pw' 1.1 'input_delay+2*trf_ip_reset+1*input_pw' 0 'input_delay+2*trf_ip_reset+2*input_pw' 0 'input_delay+3*trf_ip_reset+2*input_pw' 1.1 'input_delay+3*trf_ip_reset+3*input_pw' 1.1  'input_delay+4*trf_ip_reset+3*input_pw' 0 'input_delay+4*trf_ip_reset+4*input_pw' 0 sim_end 0)
+vX2 x2 0 PWL(0 0 'input_delay+0*trf_ip_reset+0*input_pw' 0 'input_delay+1*trf_ip_reset+0*input_pw' 1.1 'input_delay+1*trf_ip_reset+1*input_pw' 1.1 'input_delay+2*trf_ip_reset+1*input_pw' 1.1 'input_delay+2*trf_ip_reset+2*input_pw' 1.1 'input_delay+3*trf_ip_reset+2*input_pw' 1.1 'input_delay+3*trf_ip_reset+3*input_pw' 1.1  'input_delay+4*trf_ip_reset+3*input_pw' 0 'input_delay+4*trf_ip_reset+4*input_pw' 0 sim_end 0)
+vX1 x1 0 PWL(0 0 'input_delay+0*trf_ip_reset+0*input_pw' 0 'input_delay+1*trf_ip_reset+0*input_pw' 0 'input_delay+1*trf_ip_reset+1*input_pw' 0 'input_delay+2*trf_ip_reset+1*input_pw' 1.1 'input_delay+2*trf_ip_reset+2*input_pw' 1.1 'input_delay+3*trf_ip_reset+2*input_pw' 0 'input_delay+3*trf_ip_reset+3*input_pw' 0  'input_delay+4*trf_ip_reset+3*input_pw' 0 'input_delay+4*trf_ip_reset+4*input_pw' 0 sim_end 0)
+vX0 x0 0 PWL(0 0 'input_delay+0*trf_ip_reset+0*input_pw' 0 'input_delay+1*trf_ip_reset+0*input_pw' 1.1 'input_delay+1*trf_ip_reset+1*input_pw' 1.1 'input_delay+2*trf_ip_reset+1*input_pw' 0 'input_delay+2*trf_ip_reset+2*input_pw' 0 'input_delay+3*trf_ip_reset+2*input_pw' 0 'input_delay+3*trf_ip_reset+3*input_pw' 0  'input_delay+4*trf_ip_reset+3*input_pw' 1.1 'input_delay+4*trf_ip_reset+4*input_pw' 1.1 sim_end 1.1)
+vY3 y3 0 PWL(0 0 'input_delay+0*trf_ip_reset+0*input_pw' 0 'input_delay+1*trf_ip_reset+0*input_pw' 0 'input_delay+1*trf_ip_reset+1*input_pw' 0 'input_delay+2*trf_ip_reset+1*input_pw' 0 'input_delay+2*trf_ip_reset+2*input_pw' 0 'input_delay+3*trf_ip_reset+2*input_pw' 1.1 'input_delay+3*trf_ip_reset+3*input_pw' 1.1  'input_delay+4*trf_ip_reset+3*input_pw' 1.1 'input_delay+4*trf_ip_reset+4*input_pw' 1.1 sim_end 1.1)
+vY2 y2 0 PWL(0 0 'input_delay+0*trf_ip_reset+0*input_pw' 0 'input_delay+1*trf_ip_reset+0*input_pw' 1.1 sim_end 1.1)
+vY1 y1 0 PWL(0 0 'input_delay+0*trf_ip_reset+0*input_pw' 0 'input_delay+1*trf_ip_reset+0*input_pw' 1.1 'input_delay+1*trf_ip_reset+1*input_pw' 1.1 'input_delay+2*trf_ip_reset+1*input_pw' 1.1 'input_delay+2*trf_ip_reset+2*input_pw' 1.1 'input_delay+3*trf_ip_reset+2*input_pw' 0 'input_delay+3*trf_ip_reset+3*input_pw' 0 'input_delay+4*trf_ip_reset+3*input_pw' 0 'input_delay+4*trf_ip_reset+4*input_pw' 0 sim_end 0)
+vY0 y0 0 PWL(0 0 sim_end 0)
+
+vCK CK 0 pulse(0 1.1 trf_ck trf_ck trf_ck CK_pw TCK)
+vReset reset 0 PWL(0 1.1 reset_delay 1.1 'reset_delay+trf_ip_reset' 1.1 'reset_delay+reset_pw+trf_ip_reset' 1.1 'reset_delay+reset_pw+2*trf_ip_reset' 0 'reset_delay+reset_pw+2*trf_ip_reset+reset_delay2' 0 'reset_delay+reset_pw+3*trf_ip_reset+reset_delay2' 1.1 'reset_delay+reset_pw+reset_pw2+3*trf_ip_reset+reset_delay2' 1.1 'reset_delay+reset_pw+reset_pw2+4*trf_ip_reset+reset_delay2' 0 sim_end 0)
+
+vVDDIO VDDIO 0 1.8
+vVDD VDD 0 1.1
+vVSS VSS 0 0
+
+.tran 0 sim_end
+
+.MEASURE TRAN clk_div_dly_pos  TRIG v(clk_out) VAL=0.55 CROSS=7 TARG v(clk_div4_out) val=0.55 CROSS=1
+.MEASURE TRAN clk_div_dly_neg  TRIG v(clk_out) VAL=0.55 CROSS=7 TARG v(clk_div4_out_b) val=0.55 CROSS=1
+
+.MEASURE TRAN t_phl_clk_div_pos  TRIG v(clk_div4_out) VAL=0.99 CROSS=2 TARG v(clk_div4_out) val=0.11 CROSS=2
+.MEASURE TRAN t_plh_clk_div_pos  TRIG v(clk_div4_out) VAL=0.11 CROSS=1 TARG v(clk_div4_out) val=0.99 CROSS=1
+.MEASURE TRAN t_phl_clk_div_neg  TRIG v(clk_div4_out_b) VAL=0.99 CROSS=1 TARG v(clk_div4_out_b) val=0.11 CROSS=1
+.MEASURE TRAN t_plh_clk_div_neg  TRIG v(clk_div4_out_b) VAL=0.11 CROSS=2 TARG v(clk_div4_out_b) val=0.99 CROSS=2
+.MEASURE TRAN t_phl_clk_out      TRIG v(clk_out) VAL=0.99 CROSS=2 TARG v(clk_out) val=0.11 CROSS=2
+.MEASURE TRAN t_plh_clk_out      TRIG v(clk_out) VAL=0.11 CROSS=1 TARG v(clk_out) val=0.99 CROSS=1
+
+.MEASURE TRAN t_clk_in_x0  TRIG v(clk_out) VAL=0.99 CROSS=7 TARG v(x_out_0) val=0.99 CROSS=1
+
+.MEASURE TRAN x0_dly0  TRIG v(clk_div4_out) VAL=0.99 CROSS=1 TARG v(x_out_0) val=0.99 CROSS=1
+.MEASURE TRAN x0_dly1  TRIG v(clk_div4_out) VAL=0.99 CROSS=3 TARG v(x_out_0) val=0.11 CROSS=2
+.MEASURE TRAN x0_dly2  TRIG v(clk_div4_out) VAL=0.99 CROSS=7 TARG v(x_out_0) val=0.99 CROSS=3
+.MEASURE TRAN x1_dly0  TRIG v(clk_div4_out) VAL=0.99 CROSS=3 TARG v(x_out_1) val=0.99 CROSS=1
+.MEASURE TRAN x1_dly1  TRIG v(clk_div4_out) VAL=0.99 CROSS=5 TARG v(x_out_1) val=0.11 CROSS=2
+.MEASURE TRAN x2_dly0  TRIG v(clk_div4_out) VAL=0.99 CROSS=1 TARG v(x_out_2) val=0.99 CROSS=1
+.MEASURE TRAN x2_dly1  TRIG v(clk_div4_out) VAL=0.99 CROSS=7 TARG v(x_out_2) val=0.11 CROSS=2
+.MEASURE TRAN x3_dly0  TRIG v(clk_div4_out) VAL=0.99 CROSS=1 TARG v(x_out_3) val=0.99 CROSS=1
+.MEASURE TRAN x3_dly1  TRIG v(clk_div4_out) VAL=0.99 CROSS=3 TARG v(x_out_3) val=0.11 CROSS=2
+.MEASURE TRAN x3_dly2  TRIG v(clk_div4_out) VAL=0.99 CROSS=5 TARG v(x_out_3) val=0.99 CROSS=3
+.MEASURE TRAN x3_dly3  TRIG v(clk_div4_out) VAL=0.99 CROSS=7 TARG v(x_out_3) val=0.11 CROSS=4
+
+* .MEASURE TRAN y0_dly0  TRIG v(clk_div4_out) VAL=0.55 CROSS=1 TARG v(y_out_0) val=0.55 CROSS=1
+.MEASURE TRAN y1_dly0  TRIG v(clk_div4_out) VAL=0.55 CROSS=1 TARG v(y_out_1) val=0.99 CROSS=1
+.MEASURE TRAN y1_dly1  TRIG v(clk_div4_out) VAL=0.55 CROSS=5 TARG v(y_out_1) val=0.11 CROSS=2
+.MEASURE TRAN y2_dly0  TRIG v(clk_div4_out) VAL=0.55 CROSS=1 TARG v(y_out_2) val=0.99 CROSS=1
+.MEASURE TRAN y3_dly0  TRIG v(clk_div4_out) VAL=0.55 CROSS=5 TARG v(y_out_3) val=0.99 CROSS=1
+
+.option post
+.end
