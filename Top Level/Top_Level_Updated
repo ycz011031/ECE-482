@@ -1,5 +1,5 @@
 ** Generated for: hspiceD
-** Generated on: Dec  4 22:36:02 2024
+** Generated on: Dec  6 21:12:00 2024
 ** Design library name: ECE482_HW
 ** Design cell name: Top_Level
 ** Design view name: schematic
@@ -176,17 +176,17 @@ xi1 net1 clk_out shift vdd vss NAND
 ** Cell name: Off_chip_Driver
 ** View name: schematic
 .subckt Off_chip_Driver in out vdd vss
-m15 out net5 vss vss g45n2svt L=150e-9 W=600e-6 AD=60e-12 AS=61e-12 PD=612e-6 PS=632.2e-6 NRD=166.667e-6 NRS=169.444e-6 M=1
-m14 net5 net4 vss vss g45n2svt L=150e-9 W=166.6e-6 AD=17.15e-12 AS=17.15e-12 PD=179.9e-6 PS=179.9e-6 NRD=617.894e-6 NRS=617.894e-6 M=1
-m3 net4 net3 vss vss g45n2svt L=150e-9 W=45.85e-6 AD=5.0435e-12 AS=5.0435e-12 PD=56.12e-6 PS=56.12e-6 NRD=2.39913e-3 NRS=2.39913e-3 M=1
-m2 net3 net2 vss vss g45n2svt L=150e-9 W=12.64e-6 AD=1.264e-12 AS=1.896e-12 PD=13.04e-6 PS=25.88e-6 NRD=7.91139e-3 NRS=11.8671e-3 M=1
-m1 net2 net1 vss vss g45n2svt L=150e-9 W=3.48e-6 AD=522e-15 AS=522e-15 PD=7.26e-6 PS=7.26e-6 NRD=43.1034e-3 NRS=43.1034e-3 M=1
+m15 out net5 vss vss g45n2svt L=150e-9 W=600e-6 AD=60e-12 AS=60.6e-12 PD=620e-6 PS=632.2e-6 NRD=166.667e-6 NRS=168.333e-6 M=1
+m14 net5 net4 vss vss g45n2svt L=150e-9 W=166.5e-6 AD=16.65e-12 AS=17.205e-12 PD=172.5e-6 PS=183.8e-6 NRD=600.601e-6 NRS=620.621e-6 M=1
+m3 net4 net3 vss vss g45n2svt L=150e-9 W=45.8e-6 AD=4.58e-12 AS=5.038e-12 PD=47.8e-6 PS=57.16e-6 NRD=2.18341e-3 NRS=2.40175e-3 M=1
+m2 net3 net2 vss vss g45n2svt L=150e-9 W=12.64e-6 AD=1.264e-12 AS=1.58e-12 PD=13.44e-6 PS=19.96e-6 NRD=7.91139e-3 NRS=9.88924e-3 M=1
+m1 net2 net1 vss vss g45n2svt L=150e-9 W=3.48e-6 AD=348e-15 AS=522e-15 PD=3.88e-6 PS=7.56e-6 NRD=28.7356e-3 NRS=43.1034e-3 M=1
 m0 net1 in vss vss g45n2svt L=150e-9 W=960e-9 AD=144e-15 AS=144e-15 PD=2.22e-6 PS=2.22e-6 NRD=156.25e-3 NRS=156.25e-3 M=1
 m17 out net5 vdd vdd g45p2svt L=150e-9 W=822e-6 AD=82.2e-12 AS=83.022e-12 PD=842e-6 PS=858.64e-6 NRD=121.655e-6 NRS=122.871e-6 M=1
-m16 net5 net4 vdd vdd g45p2svt L=150e-9 W=229.54e-6 AD=23.453e-12 AS=23.453e-12 PD=244.22e-6 PS=244.22e-6 NRD=445.125e-6 NRS=445.125e-6 M=1
+m16 net5 net4 vdd vdd g45p2svt L=150e-9 W=229.5e-6 AD=22.95e-12 AS=23.715e-12 PD=235.5e-6 PS=251e-6 NRD=435.73e-6 NRS=450.254e-6 M=1
 m9 net4 net3 vdd vdd g45p2svt L=150e-9 W=62.8e-6 AD=6.28e-12 AS=6.908e-12 PD=64.8e-6 PS=77.56e-6 NRD=1.59236e-3 NRS=1.75159e-3 M=1
 m8 net3 net2 vdd vdd g45p2svt L=150e-9 W=17.32e-6 AD=1.732e-12 AS=2.165e-12 PD=18.12e-6 PS=26.98e-6 NRD=5.77367e-3 NRS=7.21709e-3 M=1
-m7 net2 net1 vdd vdd g45p2svt L=150e-9 W=4.76e-6 AD=714e-15 AS=714e-15 PD=9.82e-6 PS=9.82e-6 NRD=31.5126e-3 NRS=31.5126e-3 M=1
+m7 net2 net1 vdd vdd g45p2svt L=150e-9 W=4.76e-6 AD=476e-15 AS=714e-15 PD=5.16e-6 PS=10.12e-6 NRD=21.0084e-3 NRS=31.5126e-3 M=1
 m6 net1 in vdd vdd g45p2svt L=150e-9 W=1.32e-6 AD=198e-15 AS=198e-15 PD=2.94e-6 PS=2.94e-6 NRD=113.636e-3 NRS=113.636e-3 M=1
 .ends Off_chip_Driver
 ** End of subcircuit definition.
