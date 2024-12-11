@@ -1,0 +1,51 @@
+project testbench
+.lib '/class/ece482/gpdk045_mos' TT
+
+$The following parameter can be modified.
+.param TCK = 0.413n
+
+$The following parameters cannot be modified.
+.param trf_ck = 5p
+.param trf_ip_reset = 50p
+.param CK_pw = 0.5*TCK
+.param reset_delay = 0
+.param reset_delay2 = 40*TCK
+.param reset_pw = 0.9n
+.param reset_pw2 = 5n
+.param sim_end = 80*TCK
+.param input_delay = 0.5n
+.param input_pw = 4*TCK
+.param input_delay_re = 10*TCK
+.param input_delay_re2 = reset_pw2+4*TCK
+
+.include Top_Level_RC.cir
+xtop CK Reset x0 x1 x2 x3 y0 y1 y2 y3 Serial_out R_OUT vddio vdd vss Top_Level
+
+$Clock Buffer - You will clk_out as your clock signal
+mnm1 clk_out net10 vss vss g45n1svt L=45e-9 W=960e-9 AD=134.4e-15 AS=134.4e-15 PD=2.2e-6 PS=2.2e-6 NRD=145.833e-3 NRS=145.833e-3 M=1
+mnm0 net10 CK vss vss g45n1svt L=45e-9 W=240e-9 AD=33.6e-15 AS=33.6e-15 PD=760e-9 PS=760e-9 NRD=583.333e-3 NRS=583.333e-3 M=1
+mpm1 clk_out net10 vdd vdd g45p1svt L=45e-9 W=1.92e-6 AD=268.8e-15 AS=268.8e-15 PD=4.12e-6 PS=4.12e-6 NRD=72.9167e-3 NRS=72.9167e-3 M=1
+mpm0 net10 CK vdd vdd g45p1svt L=45e-9 W=480e-9 AD=67.2e-15 AS=67.2e-15 PD=1.24e-6 PS=1.24e-6 NRD=291.667e-3 NRS=291.667e-3 M=1
+
+vX3 x3 0 PWL(0 0 'input_delay+0*trf_ip_reset+0*input_pw' 0 'input_delay+1*trf_ip_reset+0*input_pw' 1.1 'input_delay+1*trf_ip_reset+1*input_pw' 1.1 'input_delay+2*trf_ip_reset+1*input_pw' 0 'input_delay+2*trf_ip_reset+2*input_pw' 0 'input_delay+3*trf_ip_reset+2*input_pw' 1.1 'input_delay+3*trf_ip_reset+3*input_pw' 1.1  'input_delay+4*trf_ip_reset+3*input_pw' 0 'input_delay+4*trf_ip_reset+4*input_pw' 0 'input_delay+5*trf_ip_reset+4*input_pw' 1.1 'input_delay+5*trf_ip_reset+5*input_pw' 1.1 'input_delay+6*trf_ip_reset+5*input_pw' 0 'input_delay+6*trf_ip_reset+6*input_pw' 0 'input_delay+7*trf_ip_reset+6*input_pw' 1.1 'input_delay+7*trf_ip_reset+7*input_pw' 1.1 'input_delay+8*trf_ip_reset+7*input_pw' 0 'input_delay+8*trf_ip_reset+8*input_pw' 0  'input_delay+8*trf_ip_reset+8*input_pw+input_delay_re' 0 'input_delay+9*trf_ip_reset+8*input_pw+input_delay_re' 1.1 'input_delay+9*trf_ip_reset+9*input_pw+input_delay_re' 1.1 'input_delay+10*trf_ip_reset+9*input_pw+input_delay_re' 0 'input_delay+10*trf_ip_reset+9*input_pw+input_delay_re++input_delay_re2' 0 'input_delay+11*trf_ip_reset+9*input_pw+input_delay_re++input_delay_re2' 1.1 'input_delay+11*trf_ip_reset+10*input_pw+input_delay_re++input_delay_re2' 1.1 'input_delay+12*trf_ip_reset+10*input_pw+input_delay_re++input_delay_re2' 0 sim_end 0)
+vX2 x2 0 PWL(0 0 'input_delay+0*trf_ip_reset+0*input_pw' 0 'input_delay+1*trf_ip_reset+0*input_pw' 1.1 'input_delay+1*trf_ip_reset+1*input_pw' 1.1 'input_delay+2*trf_ip_reset+1*input_pw' 1.1 'input_delay+2*trf_ip_reset+2*input_pw' 1.1 'input_delay+3*trf_ip_reset+2*input_pw' 0 'input_delay+3*trf_ip_reset+3*input_pw' 0  'input_delay+4*trf_ip_reset+3*input_pw' 0 'input_delay+4*trf_ip_reset+4*input_pw' 0 'input_delay+5*trf_ip_reset+4*input_pw' 1.1 'input_delay+5*trf_ip_reset+5*input_pw' 1.1 'input_delay+6*trf_ip_reset+5*input_pw' 1.1 'input_delay+6*trf_ip_reset+6*input_pw' 1.1 'input_delay+7*trf_ip_reset+6*input_pw' 0 'input_delay+7*trf_ip_reset+7*input_pw' 0 'input_delay+8*trf_ip_reset+7*input_pw' 0 'input_delay+8*trf_ip_reset+8*input_pw' 0 sim_end 0)
+vX1 x1 0 PWL(0 0 'input_delay+0*trf_ip_reset+0*input_pw' 0 'input_delay+1*trf_ip_reset+0*input_pw' 1.1 'input_delay+1*trf_ip_reset+1*input_pw' 1.1 'input_delay+2*trf_ip_reset+1*input_pw' 1.1 'input_delay+2*trf_ip_reset+2*input_pw' 1.1 'input_delay+3*trf_ip_reset+2*input_pw' 1.1 'input_delay+3*trf_ip_reset+3*input_pw' 1.1  'input_delay+4*trf_ip_reset+3*input_pw' 1.1 'input_delay+4*trf_ip_reset+4*input_pw' 1.1 'input_delay+5*trf_ip_reset+4*input_pw' 0 'input_delay+5*trf_ip_reset+5*input_pw' 0 'input_delay+6*trf_ip_reset+5*input_pw' 0 'input_delay+6*trf_ip_reset+6*input_pw' 0 'input_delay+7*trf_ip_reset+6*input_pw' 0 'input_delay+7*trf_ip_reset+7*input_pw' 0 'input_delay+8*trf_ip_reset+7*input_pw' 0 'input_delay+8*trf_ip_reset+8*input_pw' 0 sim_end 0)
+vX0 x0 0 PWL(0 0 'input_delay+0*trf_ip_reset+0*input_pw' 0 'input_delay+1*trf_ip_reset+0*input_pw' 1.1 'input_delay+1*trf_ip_reset+1*input_pw' 1.1 'input_delay+2*trf_ip_reset+1*input_pw' 1.1 'input_delay+2*trf_ip_reset+2*input_pw' 1.1 'input_delay+3*trf_ip_reset+2*input_pw' 1.1 'input_delay+3*trf_ip_reset+3*input_pw' 1.1  'input_delay+4*trf_ip_reset+3*input_pw' 1.1 'input_delay+4*trf_ip_reset+4*input_pw' 1.1 'input_delay+5*trf_ip_reset+4*input_pw' 1.1 'input_delay+5*trf_ip_reset+5*input_pw' 1.1 'input_delay+6*trf_ip_reset+5*input_pw' 1.1 'input_delay+6*trf_ip_reset+6*input_pw' 1.1 'input_delay+7*trf_ip_reset+6*input_pw' 1.1 'input_delay+7*trf_ip_reset+7*input_pw' 1.1 'input_delay+8*trf_ip_reset+7*input_pw' 1.1 'input_delay+8*trf_ip_reset+8*input_pw' 1.1 sim_end 1.1)
+vY3 y3 0 PWL(0 0 'input_delay+0*trf_ip_reset+0*input_pw' 0 'input_delay+1*trf_ip_reset+0*input_pw' 0 'input_delay+1*trf_ip_reset+1*input_pw' 0 'input_delay+2*trf_ip_reset+1*input_pw' 0 'input_delay+2*trf_ip_reset+2*input_pw' 0 'input_delay+3*trf_ip_reset+2*input_pw' 0 'input_delay+3*trf_ip_reset+3*input_pw' 0  'input_delay+4*trf_ip_reset+3*input_pw' 0 'input_delay+4*trf_ip_reset+4*input_pw' 0 'input_delay+5*trf_ip_reset+4*input_pw' 1.1 'input_delay+5*trf_ip_reset+5*input_pw' 1.1 'input_delay+6*trf_ip_reset+5*input_pw' 1.1 'input_delay+6*trf_ip_reset+6*input_pw' 1.1 'input_delay+7*trf_ip_reset+6*input_pw' 1.1 'input_delay+7*trf_ip_reset+7*input_pw' 1.1 'input_delay+8*trf_ip_reset+7*input_pw' 1.1 'input_delay+8*trf_ip_reset+8*input_pw' 1.1 sim_end 1.1)
+vY2 y2 0 PWL(0 0 'input_delay+0*trf_ip_reset+0*input_pw' 0 'input_delay+1*trf_ip_reset+0*input_pw' 0 'input_delay+1*trf_ip_reset+1*input_pw' 0 'input_delay+2*trf_ip_reset+1*input_pw' 0 'input_delay+2*trf_ip_reset+2*input_pw' 0 'input_delay+3*trf_ip_reset+2*input_pw' 0 'input_delay+3*trf_ip_reset+3*input_pw' 0  'input_delay+4*trf_ip_reset+3*input_pw' 0 'input_delay+4*trf_ip_reset+4*input_pw' 0 'input_delay+5*trf_ip_reset+4*input_pw' 1.1 'input_delay+5*trf_ip_reset+5*input_pw' 1.1 'input_delay+6*trf_ip_reset+5*input_pw' 1.1 'input_delay+6*trf_ip_reset+6*input_pw' 1.1 'input_delay+7*trf_ip_reset+6*input_pw' 1.1 'input_delay+7*trf_ip_reset+7*input_pw' 1.1 'input_delay+8*trf_ip_reset+7*input_pw' 1.1 'input_delay+8*trf_ip_reset+8*input_pw' 1.1 sim_end 1.1)
+vY1 y1 0 PWL(0 0 'input_delay+0*trf_ip_reset+0*input_pw' 0 'input_delay+1*trf_ip_reset+0*input_pw' 0 'input_delay+1*trf_ip_reset+1*input_pw' 0 'input_delay+2*trf_ip_reset+1*input_pw' 0 'input_delay+2*trf_ip_reset+2*input_pw' 0 'input_delay+3*trf_ip_reset+2*input_pw' 0 'input_delay+3*trf_ip_reset+3*input_pw' 0  'input_delay+4*trf_ip_reset+3*input_pw' 0 'input_delay+4*trf_ip_reset+4*input_pw' 0 'input_delay+5*trf_ip_reset+4*input_pw' 1.1 'input_delay+5*trf_ip_reset+5*input_pw' 1.1 'input_delay+6*trf_ip_reset+5*input_pw' 1.1 'input_delay+6*trf_ip_reset+6*input_pw' 1.1 'input_delay+7*trf_ip_reset+6*input_pw' 1.1 'input_delay+7*trf_ip_reset+7*input_pw' 1.1 'input_delay+8*trf_ip_reset+7*input_pw' 1.1 'input_delay+8*trf_ip_reset+8*input_pw' 1.1 sim_end 1.1)
+vY0 y0 0 PWL(0 0 'input_delay+0*trf_ip_reset+0*input_pw' 0 'input_delay+1*trf_ip_reset+0*input_pw' 0 'input_delay+1*trf_ip_reset+1*input_pw' 0 'input_delay+2*trf_ip_reset+1*input_pw' 0 'input_delay+2*trf_ip_reset+2*input_pw' 0 'input_delay+3*trf_ip_reset+2*input_pw' 0 'input_delay+3*trf_ip_reset+3*input_pw' 0  'input_delay+4*trf_ip_reset+3*input_pw' 0 'input_delay+4*trf_ip_reset+4*input_pw' 0 'input_delay+5*trf_ip_reset+4*input_pw' 1.1 'input_delay+5*trf_ip_reset+5*input_pw' 1.1 'input_delay+6*trf_ip_reset+5*input_pw' 1.1 'input_delay+6*trf_ip_reset+6*input_pw' 1.1 'input_delay+7*trf_ip_reset+6*input_pw' 1.1 'input_delay+7*trf_ip_reset+7*input_pw' 1.1 'input_delay+8*trf_ip_reset+7*input_pw' 1.1 'input_delay+8*trf_ip_reset+8*input_pw' 1.1 sim_end 1.1)
+
+vCK CK 0 pulse(0 1.1 trf_ck trf_ck trf_ck CK_pw TCK)
+vReset reset 0 PWL(0 1.1 reset_delay 1.1 'reset_delay+trf_ip_reset' 1.1 'reset_delay+reset_pw+trf_ip_reset' 1.1 'reset_delay+reset_pw+2*trf_ip_reset' 0 'reset_delay+reset_pw+2*trf_ip_reset+reset_delay2' 0 'reset_delay+reset_pw+3*trf_ip_reset+reset_delay2' 1.1 'reset_delay+reset_pw+reset_pw2+3*trf_ip_reset+reset_delay2' 1.1 'reset_delay+reset_pw+reset_pw2+4*trf_ip_reset+reset_delay2' 0 sim_end 0)
+
+vVDDIO VDDIO 0 1.8
+vVDD VDD 0 1.1
+vVSS VSS 0 0
+c1 R_OUT VSS 10p
+.tran 0 sim_end
+
+
+.option post
+.end
+
